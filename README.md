@@ -1,6 +1,6 @@
 What is Finger for EVE (FFE)?
 
-Finger for EVE is an intelligence management tool designed to track characters, such as hostile FCs, cyno alts, super caps, titans, etc. Following an incident where a capital fleet almost got hot dropped due to an intel sharing failure, FFE was built to provide an easier, faster, safer and more secure way to share that type of intelligence.
+Finger for EVE is an intelligence management tool designed to track characters, such as hostile FCs, cyno alts, super caps, titans, etc. Following an incident where a capital fleet almost got hot dropped due to an intel sharing failure, FFE was built to provide an easier, faster, safer and more secure way to share that type of intelligence. A screenshot of the application <a href="http://wiki.eve-id.net/images/Ffe_windows.png">can be found here.</a>
 
 Who is FFE for?
 
