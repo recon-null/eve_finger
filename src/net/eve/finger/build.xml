@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="ImageViewer" default="all" basedir="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger">
+	<description>
+		This is build file for GWT module 'net.eve.finger.Net_eve_finger' deployment.
+		GWT Designer generates it each time when you initiate deployment.
+		
+		You can use this file later for manual deployment, but keep in mind, that
+		classpath is hardcoded in it, so after changes in classpath you should
+		regenerate build file.
+	</description>
+
+	<property name="gwt.home" value="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0" />
+	<property name="gwt.module.id" value="net.eve.finger.Net_eve_finger" />
+	<property name="war.name" value="Net_eve_finger.war" />
+
+	<target name="jars" description="Package up the module project and required projects as jars">
+		<mkdir dir="war/WEB-INF/lib" />
+		<!--=== net.eve.finger ===-->
+		<jar destfile='war/WEB-INF/lib/net.eve.finger.jar'>
+			<fileset dir="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/src">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/test">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/war/WEB-INF/classes">
+				<include name="**/*.class"/>
+			</fileset>
+			<fileset dir="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/test-classes">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+		<copy todir='war/WEB-INF/lib'>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\test-classes"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\war\WEB-INF\classes"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\commons-codec-1.6.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\httpclient-4.1.2.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\httpcore-4.1.2.jar"/>
+			<fileset file="C:\Program Files\eclipse\plugins\com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37\gwt-2.4.0\gwt-dev.jar"/>
+			<fileset file="C:\Program Files\eclipse\plugins\com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37\gwt-2.4.0\validation-api-1.0.0.GA-sources.jar"/>
+			<fileset file="C:\Program Files\eclipse\plugins\com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37\gwt-2.4.0\validation-api-1.0.0.GA.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\logback-classic-1.0.0.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\slf4j-api-1.6.4.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\gxt.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\eveapi-5.0.0.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\logback-core-1.0.0.jar"/>
+			<fileset file="C:\Data\Finger for EVE (FFE)\Code\net.eve.finger\mysql-connector-java-5.1.18-bin.jar"/>
+		</copy>		
+	</target>
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes" failonerror="true" maxmemory="256m">
+			<classpath>
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/src" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/test" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/test-classes" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/war/WEB-INF/classes" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/commons-codec-1.6.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/httpclient-4.1.2.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/httpcore-4.1.2.jar" />
+				<pathelement location="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0/gwt-user.jar" />
+				<pathelement location="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0/gwt-dev.jar" />
+				<pathelement location="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA-sources.jar" />
+				<pathelement location="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0/validation-api-1.0.0.GA.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/logback-classic-1.0.0.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/slf4j-api-1.6.4.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/gxt.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/eveapi-5.0.0.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/logback-core-1.0.0.jar" />
+				<pathelement location="C:/Data/Finger for EVE (FFE)/Code/net.eve.finger/mysql-connector-java-5.1.18-bin.jar" />
+				<pathelement location="C:/Program Files/eclipse/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201112160242-rel-r37/gwt-2.4.0/gwt-dev.jar" />
+			</classpath>
+			<arg value="-style"/>
+			<arg value="OBFUSCATED"/>
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile, jars">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="war" duplicate="preserve" />
+	</target>
+	
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="C:/Data/Finger for EVE (FFE)/pub_release" />
+	</target>
+
+	<target name="all" depends="deploy" />
+
+</project>

@@ -1,0 +1,5 @@
+#Tue Jul 31 14:06:27 PDT 2012
+war.name=Net_eve_finger.war
+compiler.style=OBFUSCATED
+server.path=C\:\\pub_release
+compiler.memory.max=256m

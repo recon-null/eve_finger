@@ -1,0 +1,21 @@
+<Context>
+
+  <!-- WARNING: Once deployed, you MUST make changes to the version of this file
+                located in $CATALINA_BASE/conf/[enginename]/[hostname]/[nameOfApp].xml
+                otherwise the changes will NOT have any effect. -->  
+
+  <!-- Configure your database details here. -->
+  <Resource name="jdbc/fingerdb" auth="Container" type="javax.sql.DataSource"
+               maxActive="30" maxIdle="20" maxWait="10000"
+               validationQuery="SELECT 1"
+               testOnBorrow="true"
+               username="uname" password="pass" driverClassName="com.mysql.jdbc.Driver"
+               url="jdbc:mysql://localhost/eve_finger"/>
+         
+         
+  <!-- Set the auth provider you would like to use here AND in WEB-INF/web.xml. -->          
+  <Resource name="bean/AuthProviderFactory" auth="Container"
+            type="net.eve.finger.server.InternalDBAuth"
+            factory="org.apache.naming.factory.BeanFactory"/>
+
+</Context>
