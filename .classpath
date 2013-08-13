@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="test-classes" path="test"/>
+	<classpathentry kind="lib" path="commons-codec-1.6.jar" sourcepath="commons-codec-1.6-sources.jar"/>
+	<classpathentry kind="lib" path="httpclient-4.1.2.jar">
+
+	</classpathentry>
+	<classpathentry kind="lib" path="httpcore-4.1.2.jar">
+		
+	</classpathentry>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="logback-classic-1.0.0.jar"/>
+	<classpathentry kind="lib" path="slf4j-api-1.6.4.jar"/>
+	<classpathentry kind="lib" path="gxt.jar"/>
+	<classpathentry kind="lib" path="eveapi-5.0.0.jar" sourcepath="eveapi-5.0.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/net.eve.finger/eveapi-5.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="logback-core-1.0.0.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>
