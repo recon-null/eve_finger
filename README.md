@@ -8,7 +8,7 @@ Out of the box, FFE does NOT provide EVE API driven user registration. It is des
 
 How to install/configure/run FFE:
 
-0. You can find a WAR package <a herf="http://files.microbits.info/ndlist/ffe/Net_eve_finger.war.7z">here.</a>
+0. You can find a WAR package <a href="http://files.microbits.info/ndlist/ffe/Net_eve_finger.war.7z">here.</a>
 
 1. Deploy the app's WAR to Tomcat, and let the root of the deployed war be known as $WAR_BASE. No other app containers will be supported, but it should be trivial for an experienced Java developer to run it on another container.
 
